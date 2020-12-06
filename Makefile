@@ -7,25 +7,19 @@ INC = -Iunity\
 -Iinc\
 -Itest
 
-PROJECT_NAME = Calculator1.out
+PROJECT_NAME = Calculator.out
 
 # Output directory
 BUILD = build
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
-PROJECT_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).OUT
-
 $(PROJECT_NAME): $(SRC)
 	gcc $(SRC) $(INC) -o $(PROJECT_NAME)
 
 run:$(PROJECT_NAME)
 	./${PROJECT_NAME}
-
-test: $(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit -lm
-		./$(TEST_OUTPUT)
-		
+	
 doc:
 	make -C documentation
 
@@ -34,6 +28,3 @@ clean:
 
 all: $(SRC) $(BUILD)
 	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out -lm
-
-$(BUILD):
-	mkdir build
