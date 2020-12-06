@@ -19,6 +19,10 @@ $(PROJECT_NAME): $(SRC)
 
 run:$(PROJECT_NAME)
 	./${PROJECT_NAME}
+
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit -lm
+	./$(TEST_OUTPUT) 
 	
 doc:
 	make -C documentation
