@@ -7,7 +7,7 @@ INC = -Iunity\
 -Iinc\
 -Itest
 
-PROJECT_NAME = Calculator.out
+PROJECT_NAME = Calculator1.out
 
 # Output directory
 BUILD = build
